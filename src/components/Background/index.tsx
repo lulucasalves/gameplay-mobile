@@ -1,4 +1,3 @@
-
 import React, { ReactNode } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 
