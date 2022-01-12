@@ -20,7 +20,7 @@ type Props = TouchableOpacityProps & {
 export function Category({
   title,
   icon: Icon, checked = false,
-  hasCheckBox = false,
+  hasCheckBox = true,
   ...rest
 }: Props) {
   const { secondary70, secondary50, secondary80, secondary40 } = theme.colors;
