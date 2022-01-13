@@ -9,10 +9,10 @@ import { Avatar } from '../Avatar';
 
 import { styles } from './styles';
 
-type MemberProps = {
+export type MemberProps = {
   id: string,
   username: string,
-  avatar: string,
+  avatar_url: string,
   status: string,
 }
 
@@ -26,7 +26,7 @@ export function Member({ data }: Props) {
 
   return (
     <View style={styles.container}>
-      <Avatar urlImage={data.avatar} />
+      <Avatar urlImage={data.avatar_url} />
 
       <View>
         <Text style={styles.title}>{data.username}</Text>

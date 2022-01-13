@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     paddingTop: getStatusBarHeight(),
     paddingHorizontal: 24,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center'
   },
   title: {
@@ -18,5 +18,12 @@ export const styles = StyleSheet.create({
     fontFamily: theme.fonts.title700,
     fontSize: 20,
     color: theme.colors.heading
+  },
+  button: {
+    width: 40,
+    height: 40,
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })

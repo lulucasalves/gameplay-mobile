@@ -7,7 +7,7 @@ import React, {
   useEffect,
   useState
 } from "react"
-import { COLLECTION_USERS } from "../configs/discordAuth"
+import { COLLECTION_APPOINTMENTS, COLLECTION_USERS } from "../configs/discordAuth"
 import { api } from '../services/api'
 
 const { SCOPE } = process.env;
@@ -35,7 +35,7 @@ type AuthContextData = {
   user: User
   loading: boolean
   signIn: () => Promise<void>
-  singOut: () => Promise<void>
+  signOut: () => Promise<void>
 }
 
 type AuthorizationResponse = AuthSession.AuthSessionResult & {
@@ -85,9 +85,11 @@ function AuthProvider({ children }: Props) {
     }
   }
 
-  async function singOut() {
+  async function signOut() {
     setUser({} as User);
     await AsyncStorage.removeItem(COLLECTION_USERS);
+    const storageItems = await AsyncStorage.getItem(COLLECTION_APPOINTMENTS);
+    if (storageItems) { await AsyncStorage.removeItem(COLLECTION_APPOINTMENTS) }
   }
 
   async function loadUserStorageData() {
@@ -110,7 +112,7 @@ function AuthProvider({ children }: Props) {
       user,
       loading,
       signIn,
-      singOut
+      signOut
     }}>
       {children}
     </AuthContext.Provider>

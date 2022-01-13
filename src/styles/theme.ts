@@ -13,6 +13,7 @@ export const theme = {
     overlay: 'rgba(0,0,0,0.7)',
     highlight: '#ABB1CC',
     heading: '#DDE3F0',
+    transparent: 'rgba(255,255,255,0.1)',
     line: '#991F36',
     on: '#32BD50',
     discord: '#7289da'

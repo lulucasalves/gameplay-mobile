@@ -1,18 +1,23 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import {
-  View, Text
+  View, Text, TouchableOpacity, Modal
 } from 'react-native';
 import { Auth } from '../../context/auth';
 import { Avatar } from '../Avatar';
-
 import { styles } from './styles';
 
-export function Profile() {
+type Props = {
+  handleOpenModal?: () => void
+}
+
+export function Profile({ handleOpenModal }: Props) {
   const { user } = Auth()
+
   return (
     <View style={styles.container}>
-      <Avatar urlImage={user.avatar} />
+      <TouchableOpacity onPress={handleOpenModal} activeOpacity={.7}>
+        <Avatar urlImage={user.avatar} />
+      </TouchableOpacity>
       <View>
         <View style={styles.user}>
           <Text style={styles.greeting}>Olá,</Text>
@@ -20,7 +25,6 @@ export function Profile() {
         </View>
         <Text style={styles.message}>Hoje é dia de vitória</Text>
       </View>
-
     </View>
   );
 }
