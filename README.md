@@ -8,16 +8,16 @@
 </p>
 <table>
   <tr>
-    <td valign="top"><img src="" /></td>
-    <td valign="top"><img src="" /></td>
+    <td valign="top"><img src="https://github.com/lulucasalves/gameplay-project-mobile/blob/main/.github/img1.jpeg" /></td>
+    <td valign="top"><img src="https://github.com/lulucasalves/gameplay-project-mobile/blob/main/.github/img2.jpeg" /></td>
   </tr>
   <tr>
-    <td valign="top"><img src="" /></td>
-    <td valign="top"><img src="" /></td>
+    <td valign="top"><img src="https://github.com/lulucasalves/gameplay-project-mobile/blob/main/.github/img3.jpeg" /></td>
+    <td valign="top"><img src="https://github.com/lulucasalves/gameplay-project-mobile/blob/main/.github/img4.jpeg" /></td>
   </tr>
   <tr>
-    <td valign="top"><img src="" /></td>
-    <td valign="top"><img src="" /></td>
+    <td valign="top"><img src="https://github.com/lulucasalves/gameplay-project-mobile/blob/main/.github/img5.jpeg" /></td>
+    <td valign="top"><img src="https://github.com/lulucasalves/gameplay-project-mobile/blob/main/.github/img6.jpeg" /></td>
   </tr>
 </table>
 <br />
