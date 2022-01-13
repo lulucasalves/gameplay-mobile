@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   FlatList,
@@ -14,21 +14,10 @@ type Props = {
 }
 
 export function Modal({ handleGuildSelect }: Props) {
-  const guilds = [
-    {
-      id: '1',
-      name: 'Lendários',
-      icon: null,
-      owner: true,
-    },
-    {
-      id: '2',
-      name: 'Lendários',
-      icon: 'mim',
-      owner: true,
-    }
+  const [guilds, setGuilds] = useState<GuildProps>([])
+  const [loading, setLoading] = useState(true)
 
-  ]
+
   return (
     <View style={styles.container}>
       <FlatList
